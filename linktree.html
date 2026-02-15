@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herdin Kristianjani Zebua | LinkTree</title>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-page: #080808;
+            --bg-card: #141414;
+            --bg-header: #1a1a1a;
+            --text-utama: #E5E7EB;
+            --text-name: #60A5FA;
+            --text-tagline: #E5E7EB;
+            --accent-orange: #F97316;
+            --border-tagline: #F97316;
+            --btn-bg: #0a0a0a;
+            --btn-border: #262626;
+            --dot-color: #222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-page);
+            background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Better for vertical mobile view */
+            min-height: 100vh;
+            color: var(--text-utama);
+            padding: 40px 15px; /* Side margins on mobile */
+            overflow-x: hidden;
+        }
+
+        /* MOBILE-LIKE CARD CONTAINER */
+        .card {
+            width: 100%;
+            max-width: 450px; /* Slightly wider for better desktop presence */
+            background-color: var(--bg-card);
+            border-radius: 40px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                align-items: center; /* Center vertically on laptop/desktop */
+                padding: 40px 20px;
+            }
+        }
+
+        /* TOP HEADER DECORATION */
+        .card-header-accent {
+            width: 100%;
+            height: 60px;
+            background-color: var(--bg-header);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .notch {
+            width: 60px;
+            height: 15px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        /* PROFILE SECTION */
+        .profile-wrapper {
+            position: relative;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .profile-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                transparent 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                transparent 100%
+            );
+            transform: skewX(-25deg);
+            animation: snake 10s infinite;
+        }
+
+        .avatar-border {
+            width: 130px;
+            height: 130px;
+            border: 2px dashed var(--text-name);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .avatar-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #333;
+            animation: rotate-reverse 10s linear infinite;
+        }
+
+        @keyframes rotate-reverse {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        /* NAME & TAGLINE */
+        .name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-name);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .tagline-container {
+            width: 85%;
+            border: 1px solid var(--border-tagline);
+            border-radius: 15px;
+            padding: 10px 15px;
+            margin-bottom: 25px;
+            text-align: center;
+            background-color: rgba(249, 115, 22, 0.1);
+        }
+
+        .tagline-text {
+            color: var(--text-tagline);
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        /* LINKS */
+        .links-list {
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            padding: 14px;
+            border-radius: 12px;
+            color: var(--text-utama);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                transparent 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 100%
+            );
+            transform: skewX(-25deg);
+            animation: snake 10s infinite;
+        }
+
+        .links-list a:nth-child(1)::after { animation-delay: 2s; }
+        .links-list a:nth-child(2)::after { animation-delay: 4s; }
+        .links-list a:nth-child(3)::after { animation-delay: 6s; }
+        .links-list a:nth-child(4)::after { animation-delay: 8s; }
+
+        @keyframes snake {
+            0% { left: -150%; }
+            20% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        .link-item:hover {
+            border-color: var(--text-name);
+            background-color: rgba(96, 165, 250, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .link-item i {
+            font-size: 16px;
+        }
+
+        /* SOCIAL ICONS */
+        .social-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .social-btn {
+            width: 46px;
+            height: 46px;
+            background-color: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-utama);
+            text-decoration: none;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+            background-color: rgba(249, 115, 22, 0.05);
+        }
+
+        /* FOOTER */
+        .footer-emoji {
+            font-size: 28px;
+            margin-bottom: 5px;
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Card Notch style header -->
+        <div class="card-header-accent">
+            <div class="notch"></div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-wrapper">
+            <div class="avatar-border">
+                <img src="https://ik.imagekit.io/dzlzhxcdo/profile.jpeg?updatedAt=1771141254596" alt="Profile" class="avatar-img">
+            </div>
+        </div>
+
+        <h1 class="name">Herdin Kristianjani Zebua</h1>
+
+        <div class="tagline-container">
+            <p class="tagline-text">FULL-STACK DEV | DATA SCIENCE | NLP |<br>MOBILE APP | QA</p>
+        </div>
+
+        <!-- Links List -->
+        <div class="links-list">
+            <a href="https://saweria.co/kzherdinnn" target="_blank" class="link-item">
+                <i class="fas fa-coffee"></i>
+                Buy Me a Coffee
+            </a>
+            <a href="https://www.kzherdin.onesite.my.id/" target="_blank" class="link-item">
+                <i class="fas fa-globe"></i>
+                Web - Portfolio
+            </a>
+            <a href="https://github.com/kzherdinnn" target="_blank" class="link-item">
+                <i class="fas fa-code"></i>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/kzherdinnn/" target="_blank" class="link-item">
+                <i class="fas fa-pencil-alt"></i>
+                LinkedIn
+            </a>
+        </div>
+
+        <!-- Social Icons Row -->
+        <div class="social-row">
+            <a href="https://wa.me/6281234567890" target="_blank" class="social-btn">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/_kzherdinnn/" target="_blank" class="social-btn">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@lantaimushola7" target="_blank" class="social-btn">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://github.com/kzherdinnn" target="_blank" class="social-btn">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kzherdinnn/" target="_blank" class="social-btn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-emoji">👨‍💻</div>
+        <p class="copyright">© Herdin Kristianjani Zebua</p>
+    </div>
+
+</body>
+</html>
