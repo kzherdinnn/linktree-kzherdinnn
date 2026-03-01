@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herdin Kristianjani Zebua | LinkTree</title>
+
+    <!-- ===== SEO META TAGS ===== -->
+    <meta name="description"
+        content="Herdin Kristianjani Zebua — Full-Stack Developer, Data Science, NLP, Mobile App & QA Engineer. Temukan semua link penting saya di sini.">
+    <meta name="keywords"
+        content="Herdin Kristianjani Zebua, kzherdinnn, Full-Stack Developer, Data Science, NLP, Mobile App, QA Engineer, Portfolio, GitHub, LinkedIn">
+    <meta name="author" content="Herdin Kristianjani Zebua">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://linktree-kzherdin.onesite.my.id/">
+
+    <!-- ===== OPEN GRAPH (Facebook, WhatsApp, Discord, etc.) ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Herdin Kristianjani Zebua | LinkTree">
+    <meta property="og:description"
+        content="Full-Stack Developer | Data Science | NLP | Mobile App | QA Engineer. Temukan semua link penting saya di sini.">
+    <meta property="og:image" content="https://ik.imagekit.io/dzlzhxcdo/profile.jpeg?updatedAt=1771141254596">
+    <meta property="og:url" content="https://linktree-kzherdin.onesite.my.id/">
+    <meta property="og:site_name" content="Herdin Kristianjani Zebua LinkTree">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Herdin Kristianjani Zebua | LinkTree">
+    <meta name="twitter:description" content="Full-Stack Developer | Data Science | NLP | Mobile App | QA Engineer.">
+    <meta name="twitter:image" content="https://ik.imagekit.io/dzlzhxcdo/profile.jpeg?updatedAt=1771141254596">
+
+    <!-- ===== FAVICON ===== -->
     <link rel="icon" type="image/jpeg" href="https://ik.imagekit.io/dzlzhxcdo/profile.jpeg?updatedAt=1771141254596">
+
     <!-- Google Fonts - Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -38,17 +68,20 @@
             background-size: 20px 20px;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Better for vertical mobile view */
+            align-items: flex-start;
+            /* Better for vertical mobile view */
             min-height: 100vh;
             color: var(--text-utama);
-            padding: 40px 15px; /* Side margins on mobile */
+            padding: 40px 15px;
+            /* Side margins on mobile */
             overflow-x: hidden;
         }
 
         /* MOBILE-LIKE CARD CONTAINER */
         .card {
             width: 100%;
-            max-width: 450px; /* Slightly wider for better desktop presence */
+            max-width: 450px;
+            /* Slightly wider for better desktop presence */
             background-color: var(--bg-card);
             border-radius: 40px;
             overflow: hidden;
@@ -62,7 +95,8 @@
 
         @media screen and (min-width: 768px) {
             body {
-                align-items: center; /* Center vertically on laptop/desktop */
+                align-items: center;
+                /* Center vertically on laptop/desktop */
                 padding: 40px 20px;
             }
         }
@@ -100,12 +134,10 @@
             left: -150%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                to right,
-                transparent 0%,
-                rgba(255, 255, 255, 0.2) 50%,
-                transparent 100%
-            );
+            background: linear-gradient(to right,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.2) 50%,
+                    transparent 100%);
             transform: skewX(-25deg);
             animation: snake 10s infinite;
         }
@@ -123,8 +155,13 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .avatar-img {
@@ -137,8 +174,13 @@
         }
 
         @keyframes rotate-reverse {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(-360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
         }
 
         /* NAME & TAGLINE */
@@ -203,25 +245,42 @@
             left: -150%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                to right,
-                transparent 0%,
-                rgba(255, 255, 255, 0.1) 50%,
-                transparent 100%
-            );
+            background: linear-gradient(to right,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.1) 50%,
+                    transparent 100%);
             transform: skewX(-25deg);
             animation: snake 10s infinite;
         }
 
-        .links-list a:nth-child(1)::after { animation-delay: 2s; }
-        .links-list a:nth-child(2)::after { animation-delay: 4s; }
-        .links-list a:nth-child(3)::after { animation-delay: 6s; }
-        .links-list a:nth-child(4)::after { animation-delay: 8s; }
+        .links-list a:nth-child(1)::after {
+            animation-delay: 2s;
+        }
+
+        .links-list a:nth-child(2)::after {
+            animation-delay: 4s;
+        }
+
+        .links-list a:nth-child(3)::after {
+            animation-delay: 6s;
+        }
+
+        .links-list a:nth-child(4)::after {
+            animation-delay: 8s;
+        }
 
         @keyframes snake {
-            0% { left: -150%; }
-            20% { left: 150%; }
-            100% { left: 150%; }
+            0% {
+                left: -150%;
+            }
+
+            20% {
+                left: 150%;
+            }
+
+            100% {
+                left: 150%;
+            }
         }
 
         .link-item:hover {
@@ -273,18 +332,26 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         .copyright {
             color: #555;
             font-size: 10px;
         }
-
     </style>
 </head>
+
 <body>
 
     <div class="card">
@@ -296,7 +363,8 @@
         <!-- Profile Section -->
         <div class="profile-wrapper">
             <div class="avatar-border">
-                <img src="https://ik.imagekit.io/dzlzhxcdo/profile.jpeg?updatedAt=1771141254596" alt="Profile" class="avatar-img">
+                <img src="https://ik.imagekit.io/dzlzhxcdo/profile.jpeg?updatedAt=1771141254596" alt="Profile"
+                    class="avatar-img">
             </div>
         </div>
 
@@ -351,4 +419,5 @@
     </div>
 
 </body>
+
 </html>
